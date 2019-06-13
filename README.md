@@ -6,6 +6,7 @@ These instructions will get you a copy of the project for testing and judging pu
 
 ### Method
   1. Detect License Plate from an input picture using Faster RCNN
+  2. Using Flask to create web service 
 
 
 
