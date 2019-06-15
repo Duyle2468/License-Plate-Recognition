@@ -10,7 +10,6 @@ APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 filenameforall = ""
 
-
 @app.route("/")
 def index():
     return render_template("upload.html")
@@ -41,6 +40,7 @@ def upload():
         upload.save(destination)
         filenameforall = full_filename = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
+
     # return send_from_directory("images", filename, as_attachment=True)
     return render_template("complete.html", image_name=filename, user_image=full_filename, root=APP_ROOT)
 
@@ -60,4 +60,4 @@ def get_gallery():
 
 
 if __name__ == "__main__":
-    app.run(port=4555, debug=True)
+    app.run(port=8080, debug=True)

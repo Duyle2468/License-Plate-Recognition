@@ -2,8 +2,8 @@ import os
 from uuid import uuid4
 
 from flask import Flask, request, render_template, send_from_directory
-
-__author__ = 'ibininja'
+from Object_detection_image import detect as dt
+__author__ = 'dreamteam'
 
 app = Flask(__name__)
 # app = Flask(__name__, static_folder="images")
@@ -40,6 +40,10 @@ def upload():
 @app.route('/upload/<filename>')
 def send_image(filename):
     return send_from_directory("images", filename)
+
+@app.route('/detect/<path:filename>')
+def tetect(filename):
+    return dt(filename)
 
 if __name__ == "__main__":
     app.run(port=4555, debug=True)
