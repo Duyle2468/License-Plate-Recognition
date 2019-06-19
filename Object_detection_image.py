@@ -7,16 +7,17 @@ import numpy as np
 import tensorflow as tf
 import sys
 
+
 # This is needed since the notebook is stored in the object_detection folder.
 def detect(image_name):
 
+	
 	sys.path.append("..")
-
 	# Import utilites
 	# from utils import label_map_util
 	# from utils import visualization_utils as vis_util
 
-	# Name of the directory containing the object detection module we're using
+	# Name of the directory containing the object detection module we're using.
 	MODEL_NAME = 'inference_graph'
 	IMAGE_NAME = os.path.join('images',image_name)	
 	
@@ -79,7 +80,7 @@ def detect(image_name):
 	image = cv2.imread(PATH_TO_IMAGE)
 	image_expanded = np.expand_dims(image, axis=0)
 
-	# Perform the actual detection by running the model with the image as input
+	# Perform the actual detection by running the model with the image as input.
 	(boxes, scores, classes, num) = sess.run(
 	    [detection_boxes, detection_scores, detection_classes, num_detections],
 	    feed_dict={image_tensor: image_expanded})
