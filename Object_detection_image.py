@@ -1,11 +1,7 @@
 
 
 # Import packages
-import os
-import cv2
-import numpy as np
-import tensorflow as tf
-import sys
+
 
 # This is needed since the notebook is stored in the object_detection folder.
 def detect(image_name):

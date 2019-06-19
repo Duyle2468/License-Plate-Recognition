@@ -1,6 +1,4 @@
-import wx
-#import object_detection_image as detect
-import cv2
+
 
 class Example(wx.Frame):
 	def __init__(self, parent, title):
