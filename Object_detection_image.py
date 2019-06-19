@@ -32,7 +32,7 @@ def detect(image_name):
 	PATH_TO_LABELS = os.path.join(CWD_PATH,'training','labelmap.pbtxt')
 
 	# Path to image
-	PATH_TO_IMAGE = os.path.join(CWD_PATH,IMAGE_NAME)
+	PATH_TO_IMAGE = os.path.join(CWD_PATH,image_name)
 
 	# Number of classes the object detector can identify
 	NUM_CLASSES = 1
@@ -89,29 +89,31 @@ def detect(image_name):
 	boxes = np.squeeze(boxes)
 	classes = np.squeeze(classes).astype(np.int32)
 	scores = np.squeeze(scores)
-	print(boxes.shape)
-	print(type(boxes))
 	count = 0
 	rsBoxes = []
+	rsScore = []
 	for i in range(len(boxes)):
 	# Class 1 represents human
 		if classes[i] == 1 and scores[i] > THRESHOLD:
 			box = boxes[i]
 			rsBoxes.append(boxes[i].tolist())
+			rsScore.append(scores[i])
 			count += 1
 			cv2.rectangle(image,(int(box[1]*image.shape[1]),int(box[0]*image.shape[0])),(int(box[3]*image.shape[1]),int(box[2]*image.shape[0])),(255,0,0),2)
 			cv2.putText(image,str(int(scores[i]*100)),(int(box[1]*image.shape[1])-3,int(box[0]*image.shape[0])-3),cv2.FONT_HERSHEY_SIMPLEX, 0.3,(255,0,0),1,cv2.LINE_AA)
 		else:
 			break
-	print(rsBoxes)
+	# print(rsBoxes)
+	print(rsScore)
+	# print(classes)
 	# All the results have been drawn on image. Now display the image.
 	# image = cv2.resize(image,(1366,768))
 	# cv2.imshow('Object detector', image)
-	cv2.imwrite('images/result_'+image_name, image)
-	return 'xong roi'
+	cv2.imwrite('Result.jpg', image)
 	# Press any key to close the image
 	# cv2.waitKey(0)
-
+	
+	return rsBoxes,rsScore
 	# # Clean up
 	# cv2.destroyAllWindows()
 # detect('test3.jpg')
