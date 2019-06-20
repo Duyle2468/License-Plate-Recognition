@@ -23,7 +23,7 @@ CudNN 7.3 <br>
   
 ### Result
   Input Image: 
-  !(https://github.com/Duyle2468/License-Plate-Recognition/blob/master/Result.jpg)
+  ![Input Image](https://github.com/Duyle2468/License-Plate-Recognition/blob/master/Result.jpg)
 
 
 
