@@ -1,6 +1,6 @@
-# License-Plate-Recognition
+# License Plate Recognition
 License Plate Rocognition for Subject's Project.
-Allow user to select image from PC and detect license plate in that image
+Allow user to select image from PC and detect license plate in that image.
 
 ## Getting Started
 These instructions will get you a copy of the project for testing and judging purposes. For more information about this project, please read the reports in baocao.docx or baocao.pdf
@@ -22,8 +22,18 @@ CudNN 7.3 <br>
   2. Using trained model to detect license plate from picture <br>
   
 ### Result
-  Input Image: 
-  ![Input Image](https://github.com/Duyle2468/License-Plate-Recognition/blob/master/Result.jpg)
+  Input Image: <br>
+  ![Input Image](https://github.com/Duyle2468/License-Plate-Recognition/blob/master/7.jpg) <br>
+  Output Image: <br>
+  ![Output Image](https://github.com/Duyle2468/License-Plate-Recognition/blob/master/Result.jpg) <br>
 
-
+### Authors
+  Le Thien Duy - 15520158 <br>
+  Mai Quoc Kiet - 15520400 <br>
+  Hoang Tung Duong - 15520144 <br>
+  Vu Manh Quoc - 15520703 <br>
+  
+### License
+  This project is based on [EdjeElectronics repository](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10)
+  
 
