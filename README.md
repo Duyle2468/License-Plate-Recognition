@@ -15,7 +15,7 @@ CudNN 7.3 <br>
 [Python 3.6.8](https://www.python.org/downloads/release/python-368/) <br>
 [Tensorflow GPU 1.12](https://www.tensorflow.org/install/pip) <br>
 [Cuda 9](https://developer.nvidia.com/cuda-90-download-archive?target_os=Windows&target_arch=x86_64) <br>
-[Tensorflow GPU 1.12](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html) <br>
+[CudNN 7.3](https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html) <br>
 
 ### Method
   1. Train model using Faster R-CNN, with the help of TensorFlow GPU <br>
@@ -23,7 +23,7 @@ CudNN 7.3 <br>
   
 ### Result
   Input Image: 
-  
+  !(https://github.com/Duyle2468/License-Plate-Recognition/blob/master/Result.jpg)
 
 
 
